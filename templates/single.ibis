@@ -1,0 +1,35 @@
+{% if node.image %}
+    <div class="featured-image">
+        <img src="@root/images/{$ node.image $}">
+    </div>
+{% endif %}
+
+<article class="entry">
+    <header class="entry-header">
+        <h1 class="entry-title">{{ node.title }}</h1>
+    </header>
+
+    <div class="entry-content">
+        {{ node.html }}
+        {% if node.is_tag_base %}
+            <ul>
+                {% for child in node.children %}
+                    <li><a href="{$ child.url $}">{{ child.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    {% if node.date || node.tags %}
+        <footer class="entry-footer">
+            {% if node.date %}
+                <time class="entry-date" datetime="{$ node.date|dtformat("%Y-%m-%d") $}">
+                    {{ node.date|dtformat("%B %d, %Y") }}
+                </time>
+            {% endif %}
+            {% if node.tags %}
+                <span class="entry-tags">{{ node.tags|join(", ") }}</span>
+            {% endif %}
+        </footer>
+    {% endif %}
+</article>
