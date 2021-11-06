@@ -2,7 +2,7 @@
     <header class="main-header">
         <h1 class="main-title">Tag: {{ node.title }}</h1>
     </header>
-{% elif node.is_dir_index && node.parent && node.parent.is_dir_index && node.parent.title %}
+{% elif node.is_dir_index && node.parent && node.parent.is_dir_index && node.parent.title && node.title %}
     <header class="main-header">
         <h1 class="main-title">{{ node.parent.title }} / {{ node.title }}</h1>
     </header>
