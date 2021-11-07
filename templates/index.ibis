@@ -14,6 +14,13 @@
 
 {% if node.is_dir_index || node.is_homepage_index %}
     {% for entry in node.index %}
+
+        {% if entry.image %}
+            <div class="featured-image">
+                <img src="@root/images/{$ entry.image $}">
+            </div>
+        {% endif %}
+
         <article class="entry">
             <header class="entry-header">
                 <h2 class="entry-title">
@@ -22,7 +29,8 @@
             </header>
 
             <div class="entry-content">
-                {{ entry.html }}
+                <p>{{ entry.intro || entry.html|firstp|striptags|truncatewords(50) }}</p>
+                <p><a href="{$ entry.url $}">Read More ⟶ </a></p>
             </div>
 
             {% if entry.date || entry.tags %}

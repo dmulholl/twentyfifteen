@@ -817,7 +817,7 @@ sup.footnote {
     Mobile Landscape (480px)
 */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 580px) {
 
     .site-description {
         display: block;
@@ -869,6 +869,10 @@ sup.footnote {
     .featured-image {
         height: 200px;
         width: 85%;
+    }
+
+    .entry + .featured-image {
+        margin-top: 7.5%;
     }
 
     .menu > ul {
@@ -979,6 +983,10 @@ sup.footnote {
 
     .featured-image {
         height: 250px;
+    }
+
+    .entry + .featured-image {
+        margin-top: 7.5%;
     }
 }
 
