@@ -15,17 +15,35 @@ It will display the following attributes from the site's `config.py` file in the
 * `title`
 * `tagline`
 
-It supports the following includes:
+If a node has an `intro` attribute, this will be shown on index pages;
+otherwise a snippet of text from the node's first paragraph will be used.
+
+This theme supports the following includes:
 
 * `menu`
 
-  This file should contain a list of links.
-
-* `sidebar`
-
-  This file can contain a series of H3 headings followed by paragraphs or lists of links.
-  Its content is displayed below the site menu.
+    This file will be used to construct the theme's main menu. It should contain
+    a list of links, optionally with nested sub-lists.
 
 * `footer`
 
-  This file should contain text or links to be displayed in the site's footer.
+    This file should contain text or links to be displayed in the site's footer.
+
+* `sidebar`
+
+    This file can contain a series of H3 headings followed by paragraphs or lists of links.
+    Its content is displayed below the site menu.
+
+* `head`
+
+    If a `head.html` file is present in the includes folder its content will be
+    included at the end of each page's `<head>` section. This file can be used
+    to add custom CSS or JavaScript to a site without directly editing the
+    theme's template files.
+
+* `foot`
+
+    If a `foot.html` file is present in the includes folder its content will
+    be included at the end of each page's `<body>` section. This file can be
+    used to add custom JavaScript to a site without directly editing the
+    theme's template files.
