@@ -696,6 +696,12 @@ sup.footnote {
     margin: 0 auto;
 }
 
+.featured-image a {
+    display: block;
+    text-decoration: none;
+    border: none;
+}
+
 .featured-image img {
     display: block;
     margin: 0;
@@ -817,7 +823,7 @@ sup.footnote {
     Mobile Landscape (480px)
 */
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 480px) {
 
     .site-description {
         display: block;
