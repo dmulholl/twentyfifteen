@@ -15,6 +15,11 @@
 
     <script src="@root/js/jquery-1.11.3.min.js"></script>
     <script src="@root/js/theme.js"></script>
+
+    {% if node.meta_description %}
+        <meta name="description" content="{$ node.meta_description.strip() $}">
+    {% endif %}
+    {{ inc.head }}
 </head>
 
 <body class="{$ classes|join(' ') $}">
@@ -60,5 +65,7 @@
             </div>
         </footer>
     </div>
+
+    {{ inc.foot }}
 </body>
 </html>
