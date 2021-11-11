@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ node.meta_title || node.title || site.title }}</title>
+
+    <title>
+        {% if node.is_tag_index %}Tag: {% endif %}
+        {{ node.meta_title || node.title || site.title }}
+    </title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=latin,latin-ext">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic&subset=latin,latin-ext">
@@ -16,6 +20,7 @@
     {% if node.meta_description %}
         <meta name="description" content="{$ node.meta_description.strip() $}">
     {% endif %}
+
     {{ inc.head }}
 </head>
 
