@@ -1,11 +1,11 @@
 # Twenty Fifteen
 
-[1]: https://github.com/dmulholl/ivy
+[1]: https://github.com/dmulholl/ark
 [2]: https://wordpress.org/themes/twentyfifteen/
 [3]: http://www.dmulholl.com/demos/twentyfifteen/
 [4]: https://github.com/dmulholl/holly
 
-A blog-style, mobile-friendly theme for [Ivy][1] based on the classic [WordPress theme][2] of the same name.
+A blog-style, mobile-friendly theme for [Ark][1] based on the classic [WordPress theme][2] of the same name.
 
 * [Demo][3]
 
