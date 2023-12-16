@@ -62,7 +62,7 @@
                 {% if inc.footer %}
                     {{ inc.footer }}
                 {% else %}
-                    <a href="http://github.com/dmulholl/ivy">Powered by Ivy</a>
+                    <a href="http://github.com/dmulholl/ark">Powered by Ark</a>
                 {% endif %}
             </div>
         </footer>
